@@ -216,11 +216,9 @@ In mobile view Apply will be show and it will fire all applied filters data
 ```
 
 ## Important Information
-
-- 
+- In mobile view Apply will be show and it will fire all applied filters data
 
 ## Test Cases
-
 - 
 
 ## Steps to Start
