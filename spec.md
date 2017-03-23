@@ -130,7 +130,7 @@
 		"minValue": 1,
 		"maxValue": 245,
 		"step": 0.5,
-		//When true it shows two markers
+		//When true it shows two markers at both ends
 		"isSingleMarkers": false
 	},
 	{
@@ -197,8 +197,8 @@
 
 t-filter-tap  data -{	"id": 1, "selectedValues": [] }
 t-filter-apply data - [{"id": 1, "selectedValues": []},{"id": 2, "selectedValues": [{"primary": "$75 to $124"}]}]
-t-filter-item-reset - {}
-t-filter-reset
+t-filter-item-reset - [{"id": 1}]
+t-filter-reset - {}
 t-filter-update-state - (data as returned from getState())  -- will be fired for dependent filter data update
 
 ```
@@ -216,7 +216,16 @@ In mobile view Apply will be show and it will fire all applied filters data
 ```
 
 ## Important Information
-- In mobile view Apply will be show and it will fire all applied filters data
+- In mobile view- Filter event should be raised on click on APPLY button (not on individual selection)
+- In desktop and Tablet, filter event will fire on every action (on every selection of filter option) and corrosponding results should change
+- APPLY/RESET Link in mobile should be enabled only if atleast 1 filter is applied. (till than should appear as disabled)
+- RESET link should clear all applied filters, behavior same across all devices.
+- Title for every filter, can max occupy 1 line across all devices and trim for length names (show on toll tip)
+- Title mentioned in resources, max can occupy 1 line across all devices and after that trim
+- In filter data - Primary text should always be on left hand side and secondary on right hand. Secondary text should be in brackets.
+- Hotel Name filter - If some text is selected or written in name field, on click it should get selected so that user can override it easily.
+- Filters - "Show more" link should appear after mentioned value of "defaultOptions = 5" but if options in filter are less than 5, link should not appear.
+- Filter data - Options name (primary text) can max occupy 2 lines and trim after that and full name on tool tip
 
 ## Test Cases
 - 
