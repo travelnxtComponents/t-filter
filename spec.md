@@ -4,14 +4,16 @@
 
 ```javascript
 
-<t-filter
-        data ="{{options}}"
-        resources ="{{resources}}"
+<t-filter data=[[data]] settings=[[settings]] resources=[[resources]]>
+<template>
+//this will be shown below the filter heading and above start of first filter option
+<img src="" />
+</template>
 </t-filter>
 
 ```
 
-### Filter options
+### Filter Data
 ```javascript
 [
 	{
@@ -38,6 +40,8 @@
 		"selected": [],
 		//when multi select is allowd then checkboxes are shown 
 		"allowMultiSelect": true,
+		//this will show hover behaviour on desktop to apply only this option item by resetting all other filters		
+	  "enableSelectionOveride":true,
 		"data": [
 			{
 				"primary": "Less than $75",
@@ -83,15 +87,17 @@
 		"allowSearch": true
 	},
 	{
-		"code": "rating",
 		"title": "Rating",
 		"type": "Rating",
+		"code": "rating",
 		"isOpen": false,
 		//If there are more than default options then 'Show More' will be shown - which will show all and say 'Show Less'
 		"defaultOptions": 5,
 		"selected": [],
 		//when multi select is not allowed then radio buttons should be shown 
 		"allowMultiSelect": true,
+		//this will show hover behaviour on desktop to apply only this option item by resetting all other filters		
+	  "enableSelectionOveride":true,
 		"data": [
 			{
 				"primary": 5,
@@ -117,9 +123,9 @@
 		"allowSearch": false
 	},
 	{
-		"code": "dist",
 		"title": "Distance",
 		"type": "Range",
+		"code": "dist",
 		"isOpen": false,
 		"selected": [
 			4.5,
@@ -230,6 +236,7 @@
 ]
 ```
 
+
 ### Resources
 ```javascript
 {
@@ -237,7 +244,17 @@
 	"resetButtonText": "Reset",
 	"applyButtonText": "Apply",
 	"moreLinkText": "Show more",
-	"lessLinkText": "Show less"
+	"lessLinkText": "Show less",
+	"optionResetText":"reset"
+}
+```
+### Settings
+```javascript
+{
+	"collapsableHeader":true,
+	"optionLevelReset":true,
+	//when true it will show loading
+	"showLoading":true
 }
 ```
 
@@ -255,9 +272,9 @@ t-filter-update-state - (data as returned from getState())  -- will be fired for
 
 ```
 
-
 ### Methods
 ```javascript
+
 getState() - returns current filter state object
 
 ```
@@ -265,9 +282,17 @@ getState() - returns current filter state object
 ### Info
 ```javascript
 In mobile view Apply will be show and it will fire all applied filters data
-
+In case of no data the filter will show as collapsed or only the header will be visible
+In case or radio list if no selected value is given then no radio will be shown as selected
 ```
 
+### Style
+```javascript
+Need variable for defining header colour
+Need variable for defining border colour
+Loader mixin to set class or image details
+Need variable to control max filter height - it will show scroll when more data is there
+```
 ## Important Information
 - In mobile view- Filter event should be raised on click on APPLY button (not on individual selection)
 - In desktop and Tablet, filter event will fire on every action (on every selection of filter option) and corrosponding results should change
