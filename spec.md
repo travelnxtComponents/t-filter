@@ -284,7 +284,7 @@ getState() - returns current filter state object
 
 - In mobile view Apply will be show and it will fire all applied filters data
 - In case of no data the filter will show as collapsed or only the header will be visible
-- In case or radio list if no selected value is given then no radio will be shown as selected
+- In case of radio list if no selected value is given then no radio will be shown as selected
 
 ```
 
