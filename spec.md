@@ -97,7 +97,7 @@
 		//when multi select is not allowed then radio buttons should be shown 
 		"allowMultiSelect": true,
 		//this will show hover behaviour on desktop to apply only this option item by resetting all other filters		
-	  "enableSelectionOveride":true,
+	        "enableSelectionOveride":true,
 		"data": [
 			{
 				"primary": 5,
