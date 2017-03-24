@@ -5,7 +5,7 @@
 ```javascript
 
 <t-filter
-        data ="{{filteroptions}}"
+        data ="{{options}}"
         resources ="{{resources}}"
 </t-filter>
 
