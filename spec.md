@@ -264,6 +264,8 @@
 Raises
 t-filter-item-tap - {	"code": "price","selected": []}
 t-filter-apply    - [{"code": "curr","selected": []},{"code": "price","selected": [{"primary": "$75 to $124"}]}]
+t-filter-hotel-item-apply    { "code": "price","selected": []}
+t-filter-{item code}-item-apply
 
 Listens
 t-filter-item-reset - {"code":"price", "index":2} (any one can be provided)
