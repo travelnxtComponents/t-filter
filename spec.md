@@ -281,17 +281,19 @@ getState() - returns current filter state object
 
 ### Info
 ```javascript
-In mobile view Apply will be show and it will fire all applied filters data
-In case of no data the filter will show as collapsed or only the header will be visible
-In case or radio list if no selected value is given then no radio will be shown as selected
+
+- In mobile view Apply will be show and it will fire all applied filters data
+- In case of no data the filter will show as collapsed or only the header will be visible
+- In case or radio list if no selected value is given then no radio will be shown as selected
+
 ```
 
 ### Style
 ```javascript
-Need variable for defining header colour
-Need variable for defining border colour
-Loader mixin to set class or image details
-Need variable to control max filter height - it will show scroll when more data is there
+- Need variable for defining header colour
+- Need variable for defining border colour
+- Loader mixin to set class or image details
+- Need variable to control max filter height - it will show scroll when more data is there
 ```
 ## Important Information
 - In mobile view- Filter event should be raised on click on APPLY button (not on individual selection)
