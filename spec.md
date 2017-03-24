@@ -41,7 +41,7 @@
 		//when multi select is allowd then checkboxes are shown 
 		"allowMultiSelect": true,
 		//this will show hover behaviour on desktop to apply only this option item by resetting all other filters		
-	  "enableSelectionOveride":true,
+	        "enableSelectionOveride":true,
 		"data": [
 			{
 				"primary": "Less than $75",
