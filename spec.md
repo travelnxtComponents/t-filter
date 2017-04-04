@@ -322,6 +322,7 @@ getState() - returns current filter state object
 
 ## Documents
 - Visual designs for filter component - https://projects.invisionapp.com/share/6E9PJ7R4Q#/screens/219768213
+- Travel filter versions - https://projects.invisionapp.com/share/6E9PJ7R4Q#/screens/227194562
 - API access : Url - http://demo.travelnxt.com/dev
 - Tavisca Elements - https://github.com/atomelements and https://github.com/travelnxtelements
 - Vaadin elements - https://vaadin.com/docs/-/part/elements/elements-getting-started.html
