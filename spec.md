@@ -310,7 +310,8 @@ getState() - returns current filter state object
 - Filter data - Options name (primary text) can max occupy 2 lines and trim after that and full name on tool tip
 
 ## Test Cases
-- 
+- Verify all exposed public properties are working independently and with complex combination.
+- Verify all exposed methods and events are working.
 
 ## Steps to Start
 - Set Github repository at your end for this project, we will merge them later
